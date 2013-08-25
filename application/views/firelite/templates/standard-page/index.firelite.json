@@ -1,0 +1,21 @@
+{
+	"name": "Standard Page",
+	"view": "standard-page.index",
+	"description" : "The standard page template",
+	"fields":[
+		{
+			"name":"heading",
+			"label":"Heading",
+			"description":"Heading",
+			"datatype":"SimpleText",
+			"editor":"SimpleText"
+		},
+		{
+			"name":"main_content",
+			"label":"Main Content",
+			"description":"Main Content",
+			"datatype":"LargeText",
+			"editor":"RichText"
+		}
+	]
+}

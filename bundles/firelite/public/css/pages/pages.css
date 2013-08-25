@@ -1,0 +1,137 @@
+#treeview-app {
+	position: relative;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2),
+				0 25px 50px 0 rgba(0, 0, 0, 0.15);
+	min-height: 400px;
+}
+#treeview-header {
+	margin-bottom: 10px;
+	padding: 10px;
+}
+#treeview-messages {
+	padding: 4px 8px;
+	margin-bottom: 5px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+}
+#treeview-messages.success {
+	background-color: #72aa00;
+	color: #fff;
+}
+#treeview-messages.error {
+	background-color: #e73827;
+	color: #fff;
+}
+.yui3-button.small {
+	font-size: 0.75em;
+	padding: 4px;
+}
+#treeview-app li.collapsed li.treeview-node {
+	display: none;
+}
+li .placeholder {
+	height: 4px;
+	background-color: red;
+}
+#treeview-app li.treeview-node {
+	list-style: none;
+	margin-left: 30px;
+}
+.node-content {
+	margin-bottom: 8px;
+}
+.node-branch-icon {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background-image: url("/bundles/firelite/images/expand-contract.png");
+	cursor: pointer;
+	background-repeat: no-repeat;
+}
+.node-branch-icon:hover {
+	background-position: -16px -12px;
+}
+.node-branch-icon {
+	background-position: -16px 0;
+}
+
+.collapsed .node-branch-icon {
+	background-position: 0 0;
+}
+
+.collapsed .node-branch-icon:hover {
+	background-position: 0 -12px;
+}
+
+#main {
+
+}
+.yui3-dd-dragging {
+	height: 2px;
+	color: red;
+	background: red;
+	overflow: hidden;
+	text-indent: -9999px;
+	width: 100px;
+}
+
+.drag-handle {
+	background: #b8bac6;
+	color: #eee;
+	display: inline-block;
+	padding: 0 2px;
+	cursor: all-scroll;
+	cursor: -moz-grab;
+	cursor: grab;
+	-moz-text-shadow: 1px 1px #666666;
+	-webkit-text-shadow: 1px 1px #666666;
+	-o-text-shadow: 1px 1px #666666;
+	text-shadow: 1px 1px #666666;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.yui3-dd-draggable {
+	cursor: all-scroll;
+	cursor: -moz-grab;
+	cursor: grab;
+}
+/*
+.treeview-node.yui3-dd-drop-active-valid.yui3-dd-drop-over {
+	outline: 1px solid red;
+}
+*/
+.yui3-dd-drag-over {
+	-moz-opacity: 0.5;
+	-webkit-opacity: 0.5;
+	opacity: 0.5;
+	color: red;
+}
+
+.btn-action-positive {
+	background: #bfd255; /* Old browsers */
+	background: -moz-linear-gradient(top,  #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bfd255), color-stop(50%,#8eb92a), color-stop(51%,#72aa00), color-stop(100%,#9ecb2d)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd255', endColorstr='#9ecb2d',GradientType=0 ); /* IE6-9 */
+}
+
+.btn-action-negative {
+	background: #f85032; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f85032 0%, #f16f5c 50%, #f6290c 51%, #f02f17 71%, #e73827 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f85032), color-stop(50%,#f16f5c), color-stop(51%,#f6290c), color-stop(71%,#f02f17), color-stop(100%,#e73827)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827',GradientType=0 ); /* IE6-9 */
+}
