@@ -29,4 +29,4 @@ artisan firelite::datatype:install largetext
 artisan firelite::datatype:install simpleimage
 ```
 installing a template is:
-   artisan firelite::template:install --view=standard-page.index
+```artisan firelite::template:install --view=standard-page.index```
