@@ -22,6 +22,7 @@ Then run:
 artisan migrate:firelite
 artisan bundle:publish
 artisan firelite::setup:tree --name=Main
+artisan firelite::setup:user --user=user --pass=pass
 artisan firelite::nodetype:install alias
 artisan firelite::nodetype:install page
 artisan firelite::datatype:install simpletext
