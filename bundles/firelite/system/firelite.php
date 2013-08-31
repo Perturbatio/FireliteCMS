@@ -50,7 +50,7 @@ class Firelite {
 			
 			return static::renderNode( $node );
 		} else {
-			//TODO: get the 404 working using a default node if set
+			//TODO: get the 404 working using a default node if set?
 			//or the default laravel 404 in last instance
 			$response = Event::until( 'firelite.handleroute.notfound:before', array( $route, $site_tree_id ) );
 
@@ -216,7 +216,7 @@ class Firelite {
 	 * @return string 
 	 */
 	static public function version(){
-		return "0.1.65.alpha";
+		return "0.2.0 alpha";
 	}
 
 	/**
@@ -336,7 +336,15 @@ class Firelite {
 		if ( !empty( $editors ) ){
 			
 			foreach ( $editors as $editor ){
-				Firelite::registerEditor( $editor['name'], $editor['class'], $editor['handles'], $editor_type );
+				if ( !isset($editor['name']) || !isset($editor['class']) || !isset($editor['handles']) ){
+
+					echo 'Invalid editor: <pre>', print_r($editor, true), '</pre>';
+					exit;
+
+
+				} else {
+					Firelite::registerEditor( $editor['name'], $editor['class'], $editor['handles'], $editor_type );
+				}
 			}
 			
 		} else {
@@ -385,7 +393,9 @@ class Firelite {
 	 * @return boolean
 	 */
 	static public function registerNodetypeEditor($editor_name, $class_name, $handles_nodetypes){
-		
+
+		Log::firelite('Registering node editor: '. $class_name );
+
 		if ( class_exists( $class_name ) ) {
 			$handles_nodetypes = array_unique(array_merge((array)$handles_nodetypes, $class_name::$nodetypes));
 			
@@ -452,17 +462,26 @@ class Firelite {
 		
 		if ( empty( $nodetype ) ){
 			
-			return static::$_nodetype_editors;
+			$result = static::$_nodetype_editors;
 			
 		} else {
 			
 			$nodetype = Str::lower($nodetype);
 			
-			if (isset(static::$_editor_datatypes[ $nodetype ])){
-				return static::$_editor_datatypes[ $nodetype ];
+			if (isset(static::$_editor_nodetypes[ $nodetype ])){
+				$result = static::$_editor_nodetypes[ $nodetype ];
+			} else {
+				Log::firelite('No editor defined for nodetype ' . $nodetype);
 			}
 		}
-		Log::firelite('No editor defined for datatype ' . $nodetype);
 		return $result;
+	}
+
+	static public function getNodeEditor($nodetype){
+		$res = static::getNodeEditors($nodetype);
+		if (count($res) > 0){
+			return array_pop($res);
+		}
+		return null;
 	}
 }

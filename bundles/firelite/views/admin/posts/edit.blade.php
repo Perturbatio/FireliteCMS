@@ -47,7 +47,7 @@
 		}
 		
 		?>
-		<input type="submit" class="yui3-button button-positive" value="Update Post" />
+		<input type="submit" class="pure-button button-positive" value="Update Post" />
 		<?=Form::token();?>
 		<?=Form::close();?>
 	</div>

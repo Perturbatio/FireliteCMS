@@ -24,11 +24,11 @@ var treeview_nodes = <?=json_encode($treeview_nodes);?>;
 			</div>
 			<div id="tree-controls">
 				<div id="tree-controls-edit-structure" style="display: none;">
-					<button id="btn-edit-structure" class="yui3-button btn-action-neutral">Edit Structure</button>
+					<button id="btn-edit-structure" class="pure-button btn-action-neutral">Edit Structure</button>
 				</div>
 				<div id="tree-controls-editing-structure" style="display: none;">
-					<button id="btn-save-structure" class="yui3-button btn-action-positive">Save</button>
-					<button id="btn-cancel-edit-structure" class="yui3-button btn-action-neutral">Cancel</button>
+					<button id="btn-save-structure" class="pure-button btn-action-positive">Save</button>
+					<button id="btn-cancel-edit-structure" class="pure-button btn-action-neutral">Cancel</button>
 				</div>
 			</div>
 		</header>

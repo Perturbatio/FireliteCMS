@@ -12,7 +12,7 @@
 
 .btn-action-negative {
 	background: #f85032;
-	background: -moz-linear-gradient(top,  #f85032 0%, #f16f5c 50%, #f6290c 51%, #f02f17 71%, #e73827 100%); 
+	background: -moz-linear-gradient(top,  #f85032 0%, #f16f5c 50%, #f6290c 51%, #f02f17 71%, #e73827 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f85032), color-stop(50%,#f16f5c), color-stop(51%,#f6290c), color-stop(71%,#f02f17), color-stop(100%,#e73827)); 
 	background: -webkit-linear-gradient(top,  #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%); 
 	background: -o-linear-gradient(top,  #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%); 
@@ -25,16 +25,15 @@
 		display: none;
 	}
 	.tree-node.expandable .tree-node-state-control {
-		background-color: #EAEAEA;
 		cursor: pointer;
 		display: inline-block;
 		font-weight: bold;
-		height: 14px;
+		height: 18px;
 		line-height: 1em;
 		margin-right: 4px;
 		padding: 2px;
 		text-align: center;
-		width: 14px;
+		width: 18px;
 	}
 	
 	.tree-node-collapsed li {
@@ -110,10 +109,10 @@
 .tree-node.node_depth_10 > .tree-node-inner { padding-left: 20em; }
 
 .tree-node .tree-node-inner {
-	background: none repeat scroll 0 0 #EEEEEE;
+	background: none repeat scroll 0 0 #fff; /*This colour is needed for the highlight animation to function*/
 	border-bottom: 1px solid silver;
 	border-top: 1px solid white;
-	padding: 6px 0;
+	padding: 0.5em 0 0.5em 0.5em;
 }
 	.tree-node .tree-node-inner:hover {
 		background: none repeat scroll 0 0 #E3E1FF;
@@ -130,7 +129,7 @@
 .yui3-dd-proxy .tree-node-children {
 	display: none;
 }
-.btn-small {
+.yui3-firelitetree .pure-button.btn-small {
 	font-size: 0.85em;
 	padding: 2px 4px;
 }
@@ -163,4 +162,9 @@
 }
 #tree-controls {
 	margin-bottom: 1em;
+}
+.yui3-firelitetree ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
 }

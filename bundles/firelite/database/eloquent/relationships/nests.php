@@ -69,7 +69,7 @@ class Nests extends Relationship {
 	/**
 	 * Set the proper constraints on the relationship table.
 	 *
-	 * @return void
+	 * @return
 	 */
 	protected function constrain()
 	{

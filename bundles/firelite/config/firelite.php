@@ -20,10 +20,6 @@ return array(
 				'name' => 'nodes',
 				'class' => 'FireliteNodesPlugin'
 			),
-			/*'pages' => array(
-				'name' => 'pages',
-				'class' => 'FirelitePagesPlugin'
-			),*/
 			'users '=> array(
 				'name' => 'users',
 				'class' => 'FireliteUsersPlugin'
@@ -60,15 +56,20 @@ return array(
 				'class' => 'FireliteSimpleimageEditor',
 				'handles' => 'Simpleimage'
 			), //'Simpleimage',
-			'Integer' => 'Integer',
+			/*'Integer' => array(
+				'name' => 'BasicInteger Editor',
+				'class' => 'FireliteSimpleimageEditor',
+				'handles' => 'Simpleimage'
+			), //'Simpleimage',
+			'Integer' => 'Integer',*/
 		),
 		
 		'nodetype_editors' => array(
-			'alias' => array( 
+			/*'alias' => array(
 				'name' => 'Alias Editor', 
 				'class' => 'FireliteAliasPlugin',
 				'handles' => 'alias'
-			),
+			),*/
 			'page' => array( 
 				'name' => 'Page Editor', 
 				'class' => 'FirelitePagesPlugin',

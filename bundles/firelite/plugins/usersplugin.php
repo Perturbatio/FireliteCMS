@@ -22,7 +22,7 @@ class UsersPlugin extends FireliteBasePlugin implements \Firelite\Plugins\IFirel
 	static public $nav = array(
 		'main_nav' => array(
 			'action' => 'action_index',
-			'link_text' => 'Firelite Users'
+			'link_text' => 'Users'
 		),
 		'sub_nav' => array(
 			array(

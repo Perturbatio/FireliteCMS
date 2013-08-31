@@ -24,7 +24,7 @@ class Nested extends FireliteModel {
 	*/
 	
 	/**
-	 * @return Relationships\Has_Many
+	 * @return \Laravel\Database\Eloquent\Relationships\Has_Many
 	 */
 	public function children(){
 		//return static::where( static::$_col_parent, '=', $this->id )->get();
@@ -33,7 +33,7 @@ class Nested extends FireliteModel {
 	
 	/**
 	 * Get all desendants of the current node
-	 * @return Relationships\Nests
+	 * @return Nests
 	 */
 	public function descendants(){
 		return $this->nests(static::$_nested_model);
@@ -87,6 +87,7 @@ class Nested extends FireliteModel {
 	 * @return boolean 
 	 */
 	public function moveTo( $new_left , $where = 'first', $tree_id = null){
+		//TODO: test this actually works
 		return false;
 		$this->reload();
 		

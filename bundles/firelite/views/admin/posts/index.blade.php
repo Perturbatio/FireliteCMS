@@ -17,7 +17,7 @@
 				?>
 				<tr class="node-row">
 					<td><?=$post->title; ?></td>
-					<td><a href="<?=Firelite::getPluginURL('blog', 'edit', array($post->id)); ?>" class="yui3-button">Edit</a></td>
+					<td><a href="<?=Firelite::getPluginURL('blog', 'edit', array($post->id)); ?>" class="pure-button">Edit</a></td>
 				</tr>
 <?php } ?>
 				</tbody>

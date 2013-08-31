@@ -283,7 +283,7 @@ function(Y){
 	 */
 	function formatterActions(o){
 		var result;
-			result = '<a href="edit/' + o.data.id + '" title="Edit this user" class="yui3-button btn_edit">Edit</a>';
+			result = '<a href="edit/' + o.data.id + '" title="Edit this user" class="pure-button btn_edit">Edit</a>';
 		return result;
 	}
 	
@@ -337,11 +337,12 @@ function(Y){
 	dataTable = new Y.DataTable({
 		columns: datatable_columns,
 		summary: 'Firelite Users',
-		scrollable: 'y',
+		/*scrollable: 'y',*/
 		height: '600px',
 		sortable  : ['username'],
 		sortBy: [ 'id'],
-		recordType: [ 'id', 'username']
+		recordType: [ 'id', 'username'],
+		width: '100%'
 	});
 	
 	dataTable.plug(Y.Plugin.DataTableDataSource, {datasource: tableDataSource});
@@ -371,7 +372,7 @@ function(Y){
 		totalRecords: 0,
 		rowsPerPage: 100,
 		template: '{FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} <span class="rpp">Rows per page:</span> {RowsPerPageDropdown}',
-		rowsPerPageOptions:    [100,200,500],
+		rowsPerPageOptions:    [10,20,50],
 		firstPageLinkLabel:    '|&lt;',
 		previousPageLinkLabel: '&lt;',
 		nextPageLinkLabel:     '&gt;',
@@ -419,17 +420,17 @@ function(Y){
 			echo $response;
 		}
 		?>
-		<div class="yui3-g">
+		<div class="pure-g">
 			
-			<div class="yui3-u-1">
+			<div class="pure-u-1">
 				<h2>Filter</h2>
 				<form id="query-form" name="query_form">
 					<div id="query"></div>
 				</form>
 				<br />
 				<div id="controls">
-					<button id="apply" class="yui3-button">Apply</button>
-					<button id="reset" class="yui3-button">Clear</button>
+					<button id="apply" class="pure-button">Apply</button>
+					<button id="reset" class="pure-button">Clear</button>
 				</div>
 				<br />
 				<br />

@@ -26,7 +26,7 @@
 		?>
 		<br /><br />
 		<p>Once you have added the page, you will be able to edit its fields</p><br />
-		<input type="submit" class="yui3-button button-positive" value="Add Post" />
+		<input type="submit" class="pure-button button-positive" value="Add Post" />
 		<?=Form::token();?>
 		<?=Form::close();?>
 	</div>

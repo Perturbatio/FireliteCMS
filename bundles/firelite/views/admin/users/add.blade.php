@@ -14,8 +14,8 @@
 			$validation = null;
 		}
 		?>
-		<div class="yui3-g">
-			<div class="yui3-u-1">
+		<div class="pure-g">
+			<div class="pure-u-1">
 
 			<?php
 			echo Form::open( Firelite::getPluginURL( 'users', 'add' ));
@@ -39,8 +39,8 @@
 			<br />
 			<br />
 			<?php
-			echo Form::submit('Add', array('class' => 'yui3-button btn-action-positive'));
-			echo HTML::link(Firelite::getPluginURL('users', 'index'), 'Cancel', array('class'=>'yui3-button btn-action-neutral'));
+			echo Form::submit('Add', array('class' => 'pure-button btn-action-positive'));
+			echo HTML::link(Firelite::getPluginURL('users', 'index'), 'Cancel', array('class'=>'pure-button btn-action-neutral'));
 			echo Form::token();
 			echo Form::close();
 			?>

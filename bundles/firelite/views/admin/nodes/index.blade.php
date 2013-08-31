@@ -130,12 +130,12 @@ YUI().use('dd','anim', 'transition', 'io', 'json-parse', 'json-stringify', 'oop'
 							nodeTemplate = '<li class="tree-node">'
 									+ '<div class="tree-node-inner">'
 										+ '<span class="drag-handle"></span>'
-										+ '<span class="' + widget.treeNodeStateControlClass +' yui3-button"></span>'
+										+ '<span class="' + widget.treeNodeStateControlClass +' pure-button"></span>'
 										+ '<span class="' + widget.treeNodeIconClass + '"></span>'
 										+ '<span class="tree-node-label"><a href="' + treeNode.data.edit_url + '" title="Edit ' + treeNode.label + ' (' + treeNode.data.link_title + ')" class="' + widget.treeNodeEditClass + '">' + treeNode.label + '</a></span>'
 										+ '<span class="' + widget.treeNodeControlsClass + '">'
-										+ '<a title="Edit this node" href="' + treeNode.data.edit_url + '" class="yui3-button btn-small node-control ' + widget.treeNodeEditClass + '">Edit</a>'
-										+ '<a title="Add a child node" href="' + treeNode.data.add_child_url + '" class="yui3-button btn-small node-control ' + widget.treeNodeEditClass + '">Add Child</a>'
+										+ '<a title="Edit this node" href="' + treeNode.data.edit_url + '" class="pure-button pure-button-xsmall node-control ' + widget.treeNodeEditClass + '">Edit</a>'
+										+ '<a title="Add a child node" href="' + treeNode.data.add_child_url + '" class="pure-button pure-button-xsmall node-control ' + widget.treeNodeEditClass + '">Add Child</a>'
 										+ '</span>' 
 								
 									+ '<div class="tree-node-dropzones">'
@@ -778,22 +778,22 @@ YUI().use('dd','anim', 'transition', 'io', 'json-parse', 'json-stringify', 'oop'
 		<header id="treeview-header">
 			<div id="treeview-messages" class="no_message"></div>
 			<div id="tree-controls">
-				<div class="yui3-g">
-					<div class="yui3-u">
+				<div class="pure-g">
+					<div class="pure-u">
 						<div id="tree-controls-edit-structure">
-							<button id="btn-edit-structure" class="yui3-button btn-action-neutral">Edit Tree Structure</button>
+							<button id="btn-edit-structure" class="pure-button btn-action-neutral">Edit Tree Structure</button>
 						</div>
 					</div>
-					<div class="yui3-u">
+					<div class="pure-u">
 						<div id="tree-controls-editing-structure" style="display: none;">
-							<button id="btn-save-structure" class="yui3-button btn-action-positive">Save</button>
-							<a id="btn-cancel-edit-structure" href="" class="yui3-button btn-action-neutral fake-button">Cancel</a>
+							<button id="btn-save-structure" class="pure-button btn-action-positive">Save</button>
+							<a id="btn-cancel-edit-structure" href="" class="pure-button btn-action-neutral">Cancel</a>
 						</div>
 					</div>
-					<div class="yui3-u">
+					<div class="pure-u">
 						<div id="tree-search-wrapper">
 							<input id="inp-tree-search" type="text" placeholder="Search" />
-							<button class="yui3-button btn-action-neutral" id="btn-search">Search</button>
+							<button class="pure-button btn-action-neutral" id="btn-search">Search</button>
 						</div>
 					</div>
 				</div>
@@ -812,7 +812,7 @@ YUI().use('dd','anim', 'transition', 'io', 'json-parse', 'json-stringify', 'oop'
 	} else {
 ?>
 	<p>The requested tree is empty</p><br />
-	<a href="<?=Firelite::getPluginURL('nodes', 'add', array($tree->id));?>" class="yui3-button">Add a node</a>
+	<a href="<?=Firelite::getPluginURL('nodes', 'add', array($tree->id));?>" class="pure-button">Add a node</a>
 <?php 
 	}
 }
